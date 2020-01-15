@@ -5,6 +5,9 @@
 
 build
 dist
+.ReneesRNG.py
+.ReneesRNG.spec
+
 
 # User-specific files
 *.rsuser
