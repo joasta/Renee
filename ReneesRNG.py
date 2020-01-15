@@ -1,7 +1,23 @@
 from random import randint
 from random import random
 
-help = """
+help = """There are 7 scenarios of the program.
+
+1. The first scenario is the most simple one. It will ask you for a range in which it'll generate random numbers for you, and the quantity of numbers you want (i.e. "1 100 5" for 5 numbers from 1 to 100). It's your own private random number generator!
+
+2. Next you have a scenario in which you can randomly generate success or failure for a set percentage of success. (I.e. typing in "75" will give you 75% chance of success - and the program will only print out if you were successful.)
+
+3. Third scenario is very similar to the previous one, but it might be more useful for the application you showed me one time - if you have a set number of places in a tournament and only the first n places are successful.
+If you type in "20 5", it will place you on a random of 20 places, and print out your success or failure and a place you got.
+
+4. The next scenario enables the advantage! If you want a pony to get a bonus in its next tournament, use this scenario. The program will first ask you for the advantage in this round, and then will proceed to the third scenario (so you'd type in "10" first to give the pony 10 places of advantage, and then "20 5" to specify the places it can get). Negative numbers give the pony disadvantage!
+
+5. It's a twist on a success/failure scenario: this one is your pseudo-magic 8-ball! It'll ask you for two options, one by one, and will pick one of them randomly.
+
+6. Another 8-ball scenario, this time you can feed it more options! Write them all in one line, without using enter key - divide the options by "|" sign. The program will choose a random answer out of them.
+
+7. This is an evolution of scenario four: it will allow you to generate results of a few tournaments in a row. It will ask you for an advantage first - and it will use it for all the tournaments (except for the first one!). Then it will proceed to ask for a tournament details ("20 5" for 20 places, 5 of them get advantage in the next round).
+The difference between this scenario and #4 is that it will save the result of the previous tournament and determine if the pony gets an advantage in the next round. It will last until you quit the scenario.
 """
 
 def scenario_one():
@@ -229,7 +245,7 @@ def scenario_seven():
             print(f"You placed {value} out of {args[0]} - better luck next time.\n")
 
 
-if __name__== "__main__":
+if __name__ == "__main__":
     print("Welcome!")
     repetition = 1
 

@@ -303,51 +303,51 @@ def scenario_seven():
 #the next line means: if this file is opened as a program, treat this function as a main, executable function
 #main function is what the computer looks for to run a program
 #can this file be used not as a program? yes, but it's more complicated
-if __name__== "__main__":
-    print("Welcome!") #this line will show up just once when we run the code
+#if __name__== "__main__":
+#    print("Welcome!") #this line will show up just once when we run the code
 
-    repetition = 1 #oh? could it be...? a while loop?
+#    repetition = 1 #oh? could it be...? a while loop?
 
-    while repetition: #ya bet!
+#    while repetition: #ya bet!
 
-        choice = input("""Choose a scenario to start.
-1. Random number generator
-2. Success or failure
-3. Place in the tournament
-4. Tournament with an advantage
-5. One of the two
-6. Help me choose
-7. Multiple tournaments
-q. [Quit program]
-Choose a number and press 'enter'.
-""") #you should recognise 'input' by now - it shows a message and gets input from the user, saving the input in 'choice'
+#        choice = input("""Choose a scenario to start.
+#1. Random number generator
+#2. Success or failure
+#3. Place in the tournament
+#4. Tournament with an advantage
+#5. One of the two
+#6. Help me choose
+#7. Multiple tournaments
+#q. [Quit program]
+#Choose a number and press 'enter'.
+#""") #you should recognise 'input' by now - it shows a message and gets input from the user, saving the input in 'choice'
 
-        #Here we have stacked if-s, like I mentioned before! the profit of stacking them instead of writing independent if-s
-        #is that once it finds an if that is true, it won't check the rest of them. which tracks - if choice is '1', it surely
-        #isn't equal '2' at the same time!
-        if choice is '1':
-            scenario_one() #this is how we tell the computer: remember that def scenario_one()? run it now
-            #important: order matters. you can't tell the computer to run a function that is below this line of code.
-            #it hasn't read the code below yet, it cannot remember and recall it
-        elif choice is '2':
-            scenario_two()
-        elif choice is '3':
-            scenario_three()
-        elif choice is '4':
-            scenario_four()
-        elif choice is '5':
-            scenario_five()
-        elif choice is '6':
-            scenario_six()
-        elif choice is '7':
-            scenario_seven()
+#        #Here we have stacked if-s, like I mentioned before! the profit of stacking them instead of writing independent if-s
+#        #is that once it finds an if that is true, it won't check the rest of them. which tracks - if choice is '1', it surely
+#        #isn't equal '2' at the same time!
+#        if choice is '1':
+#            scenario_one() #this is how we tell the computer: remember that def scenario_one()? run it now
+#            #important: order matters. you can't tell the computer to run a function that is below this line of code.
+#            #it hasn't read the code below yet, it cannot remember and recall it
+#        elif choice is '2':
+#            scenario_two()
+#        elif choice is '3':
+#            scenario_three()
+#        elif choice is '4':
+#            scenario_four()
+#        elif choice is '5':
+#            scenario_five()
+#        elif choice is '6':
+#            scenario_six()
+#        elif choice is '7':
+#            scenario_seven()
 
-        elif choice is 'q':
-            repetition = 0 #don't repeat the loop again
-        else:
-            print("Choose again, and choose wisely!")
-            #the stack of if-s ends with a catch-everything-else 'else'
+#        elif choice is 'q':
+#            repetition = 0 #don't repeat the loop again
+#        else:
+#            print("Choose again, and choose wisely!")
+#            #the stack of if-s ends with a catch-everything-else 'else'
 
-        if repetition is 0:
-            print("This message will autodestruct in 3... 2... 1...")
-            #that's what gets printed before the program ends, as we know that repetition is 0, the loop won't repeat again
+#        if repetition is 0:
+#            print("This message will autodestruct in 3... 2... 1...")
+#            #that's what gets printed before the program ends, as we know that repetition is 0, the loop won't repeat again
